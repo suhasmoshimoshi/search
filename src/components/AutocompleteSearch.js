@@ -15,7 +15,7 @@ export default function AutocompleteSearch({ onSelect }) {
         setIsLoading(true);
         setError(null);
         try {
-          const response = await fetch(`http://localhost:3001/api/search?query=${query}`);
+          const response = await fetch(`https://search-backend-delta.vercel.app/api/search?query=${query}`);
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }

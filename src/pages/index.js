@@ -8,7 +8,7 @@ export default function Home() {
   const [selectedBooks, setSelectedBooks] = useState([]);
 
   const handleSelect = async (id) => {
-    const response = await fetch(`http://localhost:3001/api/book/${id}`);
+    const response = await fetch(`https://search-backend-delta.vercel.app/api/book/${id}`);
     const book = await response.json();
     setSelectedBooks((prevBooks) => [...prevBooks, book]);
   };
